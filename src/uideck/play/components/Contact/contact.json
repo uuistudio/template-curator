@@ -1,0 +1,14 @@
+{
+  "title": "Contact Us",
+  "heading": "Let's talk about <br /> Love to hear from you!",
+  "left": {
+    "icon": "mdi:map-marker",
+    "heading": "Our Location",
+    "text": "401 Broadway, 24th Floor, Orchard Cloud View, London"
+  },
+  "right": {
+    "icon": "mdi:email-check",
+    "heading": "How Can We Help?",
+    "text": "info@yourdomain.com<br/>contact@yourdomain.com"
+  }
+}

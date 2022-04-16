@@ -1,0 +1,98 @@
+---
+import defaultData from "./faq.json"
+import Item from "./Item.astro"
+let {faq} = Astro.props
+if(!faq){
+  faq = defaultData
+}
+---
+<section
+      class="
+        bg-[#f3f4ff]
+        pt-20
+        lg:pt-[120px]
+        pb-12
+        lg:pb-[90px]
+        relative
+        z-20
+        overflow-hidden
+      "
+    >
+      <div class="container">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full px-4">
+            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
+              <span class="font-semibold text-2xl text-primary mb-2 block">
+                {faq.title}
+              </span>
+              <h2
+                class="
+                  font-bold
+                  text-3xl
+                  sm:text-4xl
+                  md:text-[42px]
+                  text-dark
+                  mb-4
+                "
+              >
+                {faq.heading}
+              </h2>
+              <p
+                class="
+                  text-lg
+                  sm:text-xl
+                  leading-relaxed
+                  sm:leading-relaxed
+                  text-body-color
+                "
+              >
+                {faq.subheading}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full lg:w-1/2 px-4">
+          { faq.items.slice(0, faq.items.length / 2).map(item=>
+            <Item {item} />
+          )}
+          </div>
+          <div class="w-full lg:w-1/2 px-4">
+          { faq.items.slice(faq.items.length / 2).map(item=>
+            <Item {item} />
+          )}
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 right-0 z-[-1]">
+        <svg
+          width="1440"
+          height="886"
+          viewBox="0 0 1440 886"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            opacity="0.5"
+            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+            fill="url(#paint0_linear)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="1308.65"
+              y1="1142.58"
+              x2="602.827"
+              y2="-418.681"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#3056D3" stop-opacity="0.36" />
+              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </section>

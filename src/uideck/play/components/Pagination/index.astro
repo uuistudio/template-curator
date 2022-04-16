@@ -1,0 +1,22 @@
+---
+export interface Props {
+  recipe: {
+      url: {
+          prev: number,
+          next: number
+      };
+  };
+}
+const { page } = Astro.props;
+---
+{ page && page.lastPage !== 1 && (
+    <footer class="text-center py-8">
+        <h2 class="text-xl text-bold uppercase mb-4">More recipes</h2>
+        {page.currentPage} of {page.lastPage}
+        <ul class="flex justify-center">
+            <li><a class="flex mx-2 justify-center items-center h-12 w-12 rounded bg-pink-200" href={page.url.prev || '#'}>&#60;</a></li>
+            <li><a class="flex mx-2 justify-center items-center h-12 w-12 rounded bg-pink-200" href={page.url.next || '#'}>&#62;</a></li>
+        </ul>
+    </footer>
+    )
+}

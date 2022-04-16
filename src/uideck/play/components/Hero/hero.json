@@ -1,0 +1,21 @@
+{
+  "heading": "Open-Source Web Template for SaaS, Startup, Apps, and More",
+  "subheading": "Multidisciplinary Web Template Built with Your Favourite Technology - HTML Bootstrap, Tailwind and React NextJS.",
+  "icons": {
+    "image": "/assets/images/hero/brand.svg"
+  },
+  "cta": {
+    "button": {
+      "href": "https://links.tailgrids.com/play-download",
+      "text": "Download Now"
+    },
+    "link": {
+      "href": "https://github.com/tailgrids/play-tailwind",
+      "text": "Start on GitHub"
+    }
+  },
+  "image": {
+    "src": "/assets/images/hero/hero-image.jpg",
+    "alt": "Hero"
+  }
+}

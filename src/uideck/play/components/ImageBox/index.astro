@@ -1,0 +1,29 @@
+---
+import defaultData from "./imagebox.json";
+let { imagebox } = Astro.props;
+if (!imagebox) {
+  imagebox = defaultData;
+}
+let {classx, image} = {...imagebox}
+---
+<div
+  class={`
+    relative
+    rounded
+    overflow-hidden
+    z-20
+    h-[500px]
+    wow
+    fadeInUp
+    data-wow-delay=".1s
+    ${classx}
+  `}
+>
+  <img
+    src={image.src}
+    alt={image.alt}
+    class={`w-full h-full object-cover object-center ${image.classx}`}
+  />
+  <slot class="object-center object-cover" name="center" />
+  <slot name="bottom" />
+</div>

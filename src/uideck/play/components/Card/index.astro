@@ -1,0 +1,66 @@
+---
+import { Icon } from 'astro-icon'
+import defaultData from "./card.json"
+let {card} = Astro.props
+if(!card){
+  card = defaultData
+  console.warn("Card using default")
+}
+let {date, heading, text, href, image} = {...card}
+---
+
+<div class="mb-10 group wow fadeInUp" data-wow-delay=".1s">
+  <div class="rounded overflow-hidden mb-8">
+    <a href={href} class="block">
+      <img
+        src= {image.src}
+        alt="image"
+        class="
+          w-full
+          transition
+          group-hover:scale-125 group-hover:rotate-6
+        "
+      />
+    </a>
+  </div>
+  <div>
+    <span
+      class="
+        bg-primary
+        rounded
+        inline-block
+        text-center
+        py-1
+        px-4
+        text-xs
+        leading-loose
+        font-semibold
+        text-white
+        mb-5
+      "
+    >
+      {date}
+    </span>
+    <h3>
+      <a
+        href={href}
+        class="
+          font-semibold
+          text-xl
+          sm:text-2xl
+          lg:text-xl
+          xl:text-2xl
+          mb-4
+          inline-block
+          text-dark
+          hover:text-primary
+        "
+      >
+        {heading}
+      </a>
+    </h3>
+    <p class="text-base text-body-color">
+      {text}
+    </p>
+  </div>
+</div>

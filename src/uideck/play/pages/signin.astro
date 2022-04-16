@@ -1,0 +1,16 @@
+---
+import Bare from "../layouts/Bare.astro";
+
+import Banner from "../components/Banner.astro";
+import SignIn from "../components/SignIn.astro";
+
+let title = "Sign In Page";
+let meta = {
+  title: title,
+};
+---
+
+<Bare {meta}>
+  <Banner {title} slot="primary" />
+  <SignIn slot="content" />
+</Bare>

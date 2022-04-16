@@ -1,0 +1,39 @@
+---
+import {basename} from 'path'
+import Post from '@template/layouts/Post.astro'
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../site/posts/**/*.md')
+  return posts
+    .map((post) => {
+      const { frontmatter, ...rest } = post
+      return {
+        ...rest,  
+        ...frontmatter
+      }
+    })
+    .sort((a, b) =>
+      new Date(b.date).valueOf() - new Date(a.date).valueOf()
+    )
+    .map((post, index, posts) => ({ post: post, prev: posts[index - 1], next: posts[index + 1] }))
+    .map((item => {
+      let route = {
+        params: {slug: basename(item.post.file, '.md')},
+        props: { ...item }
+      }
+      return route
+    }))
+}
+
+// const raw = (await page.default()).metadata.source 
+const meta = {
+    title: 'Tutorials',
+    description: 'Start your next Astro project with a real world theme built by our amazing community.'
+}
+
+const { post } = Astro.props;
+---
+
+<Post {meta} {post} >
+  <post.Content slot="content"/> 
+</Post>

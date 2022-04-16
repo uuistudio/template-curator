@@ -1,0 +1,58 @@
+---
+import Full from "../layouts/Full.astro";
+import { Icon } from "astro-icon";
+
+import Hero from "../components/Hero/index.astro";
+import Features from "../components/Features/index.astro";
+import About from "../components/About/index.astro";
+import Pricing from "../components/Pricing.astro";
+import Faq from "../components/Faq/index.astro";
+import Testimonial from "../components/Testimonial/index.astro";
+import Team from "../components/Team.astro";
+
+let hero = {
+  heading: "Open-Source Web Template for SaaS, Startup, Apps, and More",
+  subheading:
+    "Multidisciplinary Web Template Built with Your Favourite Technology - HTML Bootstrap, Tailwind and React NextJS.",
+  icons: {
+    image: "/assets/images/hero/brand.svg",
+  },
+  cta: {
+    button: {
+      href: "https://links.tailgrids.com/play-download",
+      text: "Download Now",
+    },
+    link: {
+      href: "https://github.com/tailgrids/play-tailwind",
+      text: "Start on GitHub",
+    },
+  },
+  image: {
+    src: "/assets/images/hero/hero-image.jpg",
+    alt: "Hero",
+  },
+};
+---
+
+<Full>
+  <Fragment slot="logo">
+    <div class="flex item-center space-x-2">
+      <Icon class="text-red-500" size="33" name="ic:baseline-school" /><h1
+        class="-mt-6 text-2xl text-white"
+      >
+        Gifted<span class="text-6xl text-red-400">.</span>School
+      </h1>
+    </div>
+  </Fragment>
+  <Hero slot="primary" {hero}>
+    <Fragment slot="CTA">This is a test put form here</Fragment>
+  </Hero>
+  <Fragment slot="content">
+    <Features />
+    <About />
+    <Faq />
+    <Pricing />
+    <Testimonial />
+    <Team />
+  </Fragment>
+</Full>

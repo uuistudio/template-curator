@@ -1,6 +1,6 @@
 ---
 import {basename} from 'path'
-import Post from '../layouts/Post.astro'
+import Post from '@template/layouts/Post.astro'
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../../site/posts/**/*.md')

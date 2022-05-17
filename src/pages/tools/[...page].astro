@@ -1,0 +1,64 @@
+---
+import {basename} from 'path'
+import Full from "@template/layouts/Full.astro"
+import Card from '@template/components/Card/index.astro'
+import Grid from '@template/components/Grid.astro'
+import Banner from '@template/components/Banner.astro'
+import Pagination from '@template/components/Pagination/index.astro'
+
+export async function getStaticPaths({paginate}) {
+  let posts = await Astro.glob('../../../site/posts/*.md')
+  return paginate(posts, {pageSize: 3});
+}
+let title = "Blog"
+const meta = {
+    title: title,
+    description: 'Start your next Astro project with a real world theme built by our amazing community.'
+};
+
+// , href:`/${basename(file, '.md')}`}
+
+const {page} = Astro.props;
+let cards = page.data.map(({frontmatter, file}) => 
+{
+  return {
+      'date': frontmatter.date,
+      'heading': frontmatter.title,
+      'authors': frontmatter.authors,
+      'text': frontmatter.description,
+      'href': `/${basename(file, '.md')}`,
+      'tags': frontmatter.tags,
+      'comments': frontmatter.comments,
+      'views': frontmatter.views,
+      'image': {
+        'src': frontmatter.image,
+        'alt': frontmatter.title
+      }
+  }
+})
+---
+  
+<Full meta={meta} baseHref="/blog">
+    <Banner {title} slot="primary" />
+
+    <Fragment slot="info">
+      <h1 class="h1">{meta.title}</h1>
+      <p class="lq cw">{meta.description}</p>
+    </Fragment>
+
+    <Fragment slot="content">
+        <Grid>
+          <Fragment slot="content">
+            {cards.map(card => 
+              <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+              <Card {card}/>
+              </div>
+            )}
+          </Fragment>
+        </Grid>
+    </Fragment>
+
+    <Fragment slot="pagination">
+      <Pagination {page}/>
+    </Fragment>
+</Full>

@@ -1,1 +1,0 @@
-Item can be combination of a icon, image or text. 

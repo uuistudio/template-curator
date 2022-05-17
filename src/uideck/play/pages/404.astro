@@ -1,0 +1,17 @@
+---
+import Bare from "../layouts/Bare.astro";
+
+import Banner from "../components/Banner.astro";
+import Http404 from "../components/Http404.astro";
+
+let title = "404 Page";
+
+let meta = {
+  title: title,
+};
+---
+
+<Bare {meta}>
+  <Banner {title} slot="primary" />
+  <Http404 slot="content" />
+</Bare>

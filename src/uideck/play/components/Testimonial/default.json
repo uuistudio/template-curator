@@ -1,0 +1,37 @@
+{
+  "title": "Testimonials",
+  "heading": "What our Client Say",
+  "subheading": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+  "items": [
+    {
+      "quote": "“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "stars": 5,
+      "image": {
+        "src": "/assets/images/testimonials/author-01.png",
+        "alt": "Sabo Masties"
+      },
+      "name": "Sabo Masties",
+      "Description": "Founder @ Rolex"
+    },
+    {
+      "quote": "“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "stars": 5,
+      "image": {
+        "src": "/assets/images/testimonials/author-02.png",
+        "alt": "Margin Gesmu"
+      },
+      "name": "Margin Gesmu",
+      "Description": "Founder @ UI Hunter"
+    },
+    {
+      "quote": "“Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "stars": 4,
+      "image": {
+        "src": "/assets/images/testimonials/author-03.png",
+        "alt": "William Smith"
+      },
+      "name": "William Smith",
+      "Description": "Founder @ Trorex"
+    }
+  ]
+}

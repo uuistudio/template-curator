@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "href": "/",
+      "image": {
+        "src": "/assets/images/blog/author-01.png",
+        "alt": "abc"
+      },
+      "text": "By Samuyl Joshi"
+    },
+    {
+      "href": "/",
+      "icon": {
+        "name": "mdi:comment-text",
+        "color": "text-blue-300",
+        "size": "33"
+      },
+      "text": "23"
+    },
+    {
+      "href": "/",
+      "icon": {
+        "name": "mdi:eye",
+        "color": "text-blue-300",
+        "size": "33"
+      },
+      "text": "52"
+    }
+  ]
+}

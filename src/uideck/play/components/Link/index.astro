@@ -1,0 +1,10 @@
+---
+let {href} = Astro.props
+---
+{ href ?
+  <a href={href}>
+    <slot name="content" />
+  </a>
+:
+  <slot name="content" />
+}

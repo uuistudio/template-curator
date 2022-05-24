@@ -33,7 +33,7 @@ let {imagebox, infobox, tagstrip, share} = parser(post)
         <div class="w-full px-4">
           <div class="flex flex-wrap -mx-4 space-y-4">  
             <div class="w-full lg:w-8/12 px-4 space-y-8">
-              <Article title={post.title} slot="content" >
+              <Article title={post.title} slot="content" class="prose lg:prose-xl">
                 <Fragment slot="content">
                   <slot name="content" />
                 </Fragment>

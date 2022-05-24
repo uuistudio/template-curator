@@ -9,7 +9,7 @@ import Logo from '@template/components/Logo.astro'
 import SiteData from "@src/utils.js"
 
 export async function getStaticPaths({paginate}) {
-  let posts = await Astro.glob('../../../data/posts/*.md')
+  let posts = await Astro.glob('../../../../../data/posts/*.md')
   return paginate(posts, {pageSize: 3});
 }
 
@@ -32,7 +32,7 @@ let cards = page.data.map(({frontmatter, file}) =>
       heading: frontmatter.title,
       authors: frontmatter.authors,
       text: frontmatter.description,
-      href: `/${basename(file, '.md')}`,
+      href: `/uideck/play/${basename(file, '.md')}`,
       tags: frontmatter.tags,
       comments: frontmatter.comments,
       views: frontmatter.views,

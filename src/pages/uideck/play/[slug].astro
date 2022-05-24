@@ -1,10 +1,12 @@
 ---
 import {basename} from 'path'
 import Post from '@template/layouts/Post.astro'
-import Site from '../../data/site.json'
+
+import SiteData from "@src/utils.js"
+let site = await SiteData('../data')
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../../data/posts/**/*.md')
+  const posts = await Astro.glob('../../../../data/posts/**/*.md')
   return posts
     .map((post) => {
       const { frontmatter, ...rest } = post
@@ -27,12 +29,15 @@ export async function getStaticPaths() {
 const meta = {
     title: 'Tutorials',
     description: 'Start your next Astro project with a real world theme built by our amazing community.',
-    navbar: Site.navbar
+    navbar: site.navbar
 }
 
 const { post } = Astro.props;
 ---
 
 <Post {meta} {post} >
+  <Fragment slot="logo">
+    <Logo logo={site.logo} />
+  </Fragment>
   <post.Content slot="content"/> 
 </Post>

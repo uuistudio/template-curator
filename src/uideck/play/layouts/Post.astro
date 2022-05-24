@@ -1,20 +1,16 @@
 ---
 import Full from "./Full.astro";
-import ImageBox from "../components/ImageBox/index.astro";
-import InfoBox from "../components/InfoBox/index.astro";
-import SummaryGrid from "../components/SummaryGrid/index.astro";
-import Sidebar from "../components/Sidebar/index.astro";
-import Article from "../components/Article/index.astro";
-import TagStrip from "../components/TagStrip/index.astro";
-import Share from "../components/Share/index.astro";
+import ImageBox from "../components/ImageBox/ImageBox.astro";
+import InfoBox from "../components/InfoBox/InfoBox.astro";
+import SummaryGrid from "../components/SummaryGrid/SummaryGrid.astro";
+import Sidebar from "../components/Sidebar/Sidebar.astro";
+import Article from "../components/Article/Article.astro";
+import TagStrip from "../components/TagStrip/TagStrip.astro";
+import Share from "../components/Share/Share.astro";
 import parser from "./parser.js"
 
-let {post} = Astro.props
+let {meta, post} = Astro.props
 let {imagebox, infobox, tagstrip, share} = parser(post)
-
-let meta = {
-  title: post.title,
-};
 ---
 
 <Full {meta}>

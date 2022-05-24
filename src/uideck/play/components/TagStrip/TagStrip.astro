@@ -1,0 +1,41 @@
+---
+import Item from "../Item/Item.astro"
+import defaultData from "./tagstrip.json"
+
+let {tagstrip} = Astro.props
+if(!tagstrip){
+  tagstrip = defaultData
+  console.log("using default tagstrip")
+}
+let {items} = {...tagstrip}
+---
+<div
+    class="
+      flex
+      items-center
+      flex-wrap
+      mb-8
+      md:mb-0
+      wow
+      fadeInUp
+    "
+    data-wow-delay=".1s"
+  >
+  { items && items.map(item =>
+    <div class="
+      flex items-center 
+      block
+      bg-primary bg-opacity-5
+      text-primary
+      rounded-md
+      text-sm
+      font-medium
+      hover:bg-opacity-100 hover:text-white
+      space-x-2
+      p-1
+      mr-4
+    ">
+    <Item {item} />
+    </div>
+  )}
+</div>

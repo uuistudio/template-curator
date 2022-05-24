@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon";
+import Post from "../Post/Post.astro"
+import defaultData from "./article.json";
+let { post } = Astro.props;
+if (!post) {
+  post = defaultData;
+  console.log("using default post")
+}
+---
+
+<Post {post} >
+  <Fragment slot="content">
+    <slot name="content"/>
+  </Fragment>
+</Post>

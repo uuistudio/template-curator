@@ -1,0 +1,21 @@
+---
+import Bare from "@template/layouts/Bare.astro";
+import Banner from "@template/components/Banner.astro";
+import SignUp from "@template/components/SignUp.astro";
+import Logo from '@template/components/Logo.astro'
+
+import SiteData from "@src/utils.js"
+let site = await SiteData('../data')
+let title = "Sign Up Page";
+let meta = {
+  title: title,
+};
+---
+
+<Bare {meta}>
+  <Fragment slot="logo">
+    <Logo logo={site.logo} />
+  </Fragment>
+  <Banner {title} slot="primary" />
+  <SignUp slot="content" />
+</Bare>

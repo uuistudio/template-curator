@@ -1,19 +1,22 @@
 ---
-import Base from "../layouts/Base.astro";
-import Navbar from "../components/Navbar/index.astro";
-import Contact from "../components/Contact/index.astro";
+import Base from "./Base.astro";
+import Navbar from "../components/Navbar/Navbar.astro";
+import Contact from "../components/Contact/Contact.astro";
 import Footer from "../components/Footer.astro";
 
 let { meta } = Astro.props;
+let { navbar } = { ...meta };
 ---
 
 <Base {meta}>
-  <Navbar>
+  <Navbar {navbar}>
     <Fragment slot="logo">
       <slot name="logo" />
     </Fragment>
   </Navbar>
-  <slot name="primary" />
+  <div id="home" class="relative pt-[120px] md:pt-[130px] lg:pt-[160px] bg-primary">
+    <slot name="primary" />
+  </div>
   <slot name="content" />
   <Contact />
   <Footer />

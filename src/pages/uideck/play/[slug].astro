@@ -1,6 +1,7 @@
 ---
 import {basename} from 'path'
 import Post from '@template/layouts/Post.astro'
+import Site from '../../data/site.json'
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../../data/posts/**/*.md')
@@ -12,9 +13,6 @@ export async function getStaticPaths() {
         ...frontmatter
       }
     })
-    .sort((a, b) =>
-      new Date(b.date).valueOf() - new Date(a.date).valueOf()
-    )
     .map((post, index, posts) => ({ post: post, prev: posts[index - 1], next: posts[index + 1] }))
     .map((item => {
       let route = {
@@ -28,7 +26,8 @@ export async function getStaticPaths() {
 // const raw = (await page.default()).metadata.source 
 const meta = {
     title: 'Tutorials',
-    description: 'Start your next Astro project with a real world theme built by our amazing community.'
+    description: 'Start your next Astro project with a real world theme built by our amazing community.',
+    navbar: Site.navbar
 }
 
 const { post } = Astro.props;

@@ -1,0 +1,33 @@
+{
+  "domain": "socialgood.io",
+  "href": "http://socialgood.io",
+  "social": [
+    {"account": "twitter", "name": "_socialgood"}
+  ],
+  "logo": {
+    "href": "/",
+    "width": 70,
+    "height": 32,
+    "parts": [
+    {"icon": {"name": "mdi:account", "color": "text-blue-700"}, "size": 33},
+    {"text": {"text": "Social Good", "color": "text-blue-700"}}
+    ]
+  },  
+  "colors": {
+    "primary": "8A307F",
+    "secondary": "79A7D3",
+    "highlight": "6883BC"
+  },
+  "fonts": {
+    "headings": "Alegreya",
+    "text": "Source Sans Pro"
+  },
+  "navbar": {
+    "items": [
+      {"text": "Guides", "slug": "guides"},
+      {"text": "About", "slug": "about"},
+      {"text": "Tools", "slug": "tools"},
+      {"text": "Resources", "slug": "resources"}
+    ]
+  }
+}

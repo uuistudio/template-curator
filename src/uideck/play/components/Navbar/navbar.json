@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "slug": "/"
+    },
+    {
+      "text": "About",
+      "slug": "#about"
+    },
+    {
+      "text": "Pricing",
+      "slug": "#pricing"
+    },
+    {
+      "text": "Team",
+      "slug": "#team"
+    },
+    {
+      "text": "Contact",
+      "slug": "#contact"
+    },
+    {
+      "text": "Pages",
+      "items": [
+        {
+          "text": "About Page",
+          "slug": "/about"
+        },
+        {
+          "text": "Pricing Page",
+          "slug": "/pricing"
+        },
+        {
+          "text": "Contact Page",
+          "slug": "/contact"
+        },
+        {
+          "text": "Blog Page",
+          "slug": "/blog"
+        },
+        {
+          "text": "Article Page",
+          "slug": "/article"
+        },
+        {
+          "text": "Sign In Page",
+          "slug": "/signin"
+        },
+        {
+          "text": "Sign Up Page",
+          "slug": "/signup"
+        },
+        {
+          "text": "404 Page",
+          "slug": "/404"
+        }
+      ]
+    }
+  ]
+}

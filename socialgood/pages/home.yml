@@ -1,0 +1,102 @@
+hero:
+  heading: "Ultimate resource to increase your social presents"
+  subheading: "Learn how to increse efficiency with automation, deligate busy work and management."
+  cta: 
+    button:
+      href: 'https://links.tailgrids.com/play-download'
+      text: Download Now
+    link:
+      href: 'https://github.com/tailgrids/play-tailwind'
+      text: Start on GitHub
+  image:
+    src: /assets/images/hero/hero-image.jpg
+    alt: Hero
+benefits:
+  heading: An indispensable tool for Twitter marketing
+  text: 
+    - SocialGood is also for people without a lot of time for marketing or who are not professional marketers. 
+    - SocialGood has the features and support to produce results, no matter what your background.
+  items:
+    - heading: Increase efficiency with automation
+      text: Automate tweet and follower management and analysis to increase efficiency, freeing you up to focus on more creative tasks.
+      image: tool-cap1_en.png
+    - heading: Increase followers and improve engagement
+      text: Automate tweet and follower management and analysis to increase efficiency, freeing you up to focus on more creative tasks.
+      image: tool-cap2_en.png
+    - heading: Get the support you need
+      text: With detailed help and documentation, users just starting out in Twitter account management can get all the information they need. A support form is also available for any questions you may have.
+      image: tool-cap3_en.png
+features:
+  heading: Realize your goals with a full range of features
+  text: Includes all the features needed to succeed with Twitter marketing.
+  items:
+    - heading: Follower growth
+      items: 
+        - icon:
+            name: mid-account
+            size: 55
+          heading: Follow-back & Unfollow
+          text: Improve your follower/following ratio with the follow management features.
+        - icon:
+            name: mid-comment
+            size: 55
+          heading: Powerful Filters
+          text: Easily manage followers with over 30 powerful filters.      
+    - heading: Automation
+      items: 
+        - icon:
+            name: mid-account
+            size: 55
+          heading: Scheduled tweets
+          text: Tweet automatically at a specified date and time.
+        - icon:
+            name: mid-comment
+            size: 55
+          heading: Posting time
+          text: Queue tweets to be posted automatically at preset date and time slots.       
+        - icon:
+            name: mid-comment
+            size: 55
+          heading: RSS Auto Tweet
+          text: Tweet automatically when RSS feeds are updated.    
+whychooseus:
+  heading: 3 reasons why so many choose SocialGood
+  items: 
+    - icon:
+        name: mid-account
+        size: 55
+      heading: Fully Twitter compliant
+      text: All features provided are 100% compliant with Twitter's official "Twitter Rules" and "Automation Rules".
+    - icon:
+        name: mid-account
+        size: 55
+      heading: Secure
+      text: Using 'Twitter's official "OAuth" authentication, you can use SocialDog without registering a password. We are ISO27001 (ISMS) certified and operate in accordance with international security standards. Details
+    - icon:
+        name: mid-account
+        size: 55
+      heading: Safe account connection
+      text: Tweets, follows, and other account activity will never occur without your permission.   
+faq:
+  heading: Frequently Asked Questions
+  items:
+    - icon:
+        name: mid-account
+        size: 55
+      heading: "Q: Is there a free trial?"
+      text: First time users of SocialGood can try out the features of paid plans for 7 days completely free.
+    - icon:
+        name: mid-account
+        size: 55
+      heading: "Q: Is it possible to change plans?"
+      text: Yes. Plans can be changed at any time from the web. When changing to a paid plan, the fee will be prorated. Note that we are unable to refund payments that have already been processed. Details
+    - icon:
+        name: mid-account
+        size: 55
+      heading: "Q: What payment methods are available?"
+      text: Payment can be made by credit card or by invoice. When paying by credit card, Visa, Mastercard, American Express, JCB, Diners Club, and Discover cards can be used. Payment by invoice is available to corporate and sole proprietors in Japan only
+    - icon:
+        name: mid-account
+        size: 55
+      heading: "Q: How do the follow and unfollow limits work?"
+      text: There are daily limits to the number of times you can follow and unfollow using SocialDog. These limits can be increased by upgrading your plan. The above follow and unfollow limits are limits relating to this service. There are no changes to limits imposed by Twitter. Please use this service in accordance with Twitter rules and the Terms of Service of Twitter.

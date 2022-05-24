@@ -1,6 +1,5 @@
 module.exports = {
-  content: ["./*.html", "./assets/**/*.js"],
-
+  content: ["../**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
       sm: "540px",

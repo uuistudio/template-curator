@@ -1,13 +1,13 @@
 ---
 import {basename} from 'path'
 import Full from "@template/layouts/Full.astro"
-import Card from '@template/components/Card/index.astro'
+import Card from '@template/components/Card/Card.astro'
 import Grid from '@template/components/Grid.astro'
 import Banner from '@template/components/Banner.astro'
-import Pagination from '@template/components/Pagination/index.astro'
+import Pagination from '@template/components/Pagination/Pagination.astro'
 
 export async function getStaticPaths({paginate}) {
-  let posts = await Astro.glob('../../../site/posts/*.md')
+  let posts = await Astro.glob('../../../data/posts/*.md')
   return paginate(posts, {pageSize: 3});
 }
 let title = "Blog"

@@ -5,14 +5,20 @@ import Card from '@template/components/Card/Card.astro'
 import Grid from '@template/components/Grid.astro'
 import Banner from '@template/components/Banner.astro'
 import Pagination from '@template/components/Pagination/Pagination.astro'
+import Logo from '@template/components/Logo.astro'
+import SiteData from "@src/utils.js"
 
 export async function getStaticPaths({paginate}) {
   let posts = await Astro.glob('../../../data/posts/*.md')
   return paginate(posts, {pageSize: 3});
 }
+
+let site = await SiteData('../data')
+
 let title = "Blog"
 const meta = {
     title: title,
+    navbar: site.navbar,
     description: 'Start your next Astro project with a real world theme built by our amazing community.'
 };
 
@@ -22,23 +28,26 @@ const {page} = Astro.props;
 let cards = page.data.map(({frontmatter, file}) => 
 {
   return {
-      'date': frontmatter.date,
-      'heading': frontmatter.title,
-      'authors': frontmatter.authors,
-      'text': frontmatter.description,
-      'href': `/${basename(file, '.md')}`,
-      'tags': frontmatter.tags,
-      'comments': frontmatter.comments,
-      'views': frontmatter.views,
-      'image': {
-        'src': frontmatter.image,
-        'alt': frontmatter.title
+      date: frontmatter.date,
+      heading: frontmatter.title,
+      authors: frontmatter.authors,
+      text: frontmatter.description,
+      href: `/${basename(file, '.md')}`,
+      tags: frontmatter.tags,
+      comments: frontmatter.comments,
+      views: frontmatter.views,
+      image: {
+        src: frontmatter.image,
+        alt: frontmatter.title
       }
   }
 })
 ---
   
 <Full meta={meta} baseHref="/blog">
+    <Fragment slot="logo">
+      <Logo logo={site.logo} />
+    </Fragment>
     <Banner {title} slot="primary" />
 
     <Fragment slot="info">

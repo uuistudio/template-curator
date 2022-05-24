@@ -66,13 +66,18 @@ if (!meta) {
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
       pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
+        let href = document.querySelector(elem.getAttribute("href"))
+        if (href.StartsWith("#")){
+          console.log(href)
+          elem.addEventListener("click", (e) => {
+            let href = document.querySelector(elem.getAttribute("href"))
+            e.preventDefault();
+            document.querySelector(elem.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+              offsetTop: 1 - 60,
+            });
           });
-        });
+        }
       });
 
       // section menu active

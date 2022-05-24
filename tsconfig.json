@@ -3,7 +3,8 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@template/*": ["src/uideck/play/*"]
+      "@template/*": ["src/uideck/play/*"],
+      "@src/*": ["src/*"]
     }
   }
 }

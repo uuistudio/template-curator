@@ -1,0 +1,19 @@
+---
+import Full from "@template/layouts/Full.astro";
+import Banner from "@template/components/Banner.astro";
+import Logo from '@template/components/Logo.astro'
+
+import SiteData from "@src/utils.js"
+let site = await SiteData('../data')
+let title = "Contact Page";
+let meta = {
+  title: title,
+};
+---
+
+<Full {meta}>
+  <Fragment slot="logo">
+    <Logo logo={site.logo} />
+  </Fragment>
+  <Banner {title} slot="primary" />
+</Full>

@@ -1,0 +1,80 @@
+{
+  "domain": "socialgood.io",
+  "href": "http://socialgood.io",
+  "social": [{ "account": "twitter", "name": "_socialgood" }],
+  "logo": {
+    "href": "/",
+    "width": 70,
+    "height": 32,
+    "icon": { "name": "ic:baseline-school", "style": "text-gray-600 mr-2", "size": 33},
+    "texts": [
+      {
+        "text": "Gifted",
+        "style": "text-2xl text-pink-300 leading-4"
+      },
+      {
+        "text": ".",
+        "style": "text-6xl text-gray-600 leading-10"
+      },
+      {
+        "text": "School",
+        "style": "text-2xl text-white leading-4"
+      }
+    ]
+  },
+  "colors": {
+    "primary": "8A307F",
+    "secondary": "79A7D3",
+    "highlight": "6883BC"
+  },
+  "fonts": {
+    "headings": "Alegreya",
+    "text": "Source Sans Pro"
+  },
+  "navbar": {
+    "items": [
+      { "text": "Home", "slug": "#home" },
+      { "text": "About", "slug": "#about" },
+      { "text": "Pricing", "slug": "#pricing" },
+      { "text": "Team", "slug": "#team" },
+      { "text": "Contact", "slug": "#contact" },
+      {
+        "text": "Pages",
+        "items": [
+          {
+            "text": "About Page",
+            "slug": "./about"
+          },
+          {
+            "text": "Pricing Page",
+            "slug": "./pricing"
+          },
+          {
+            "text": "Contact Page",
+            "slug": "./contact"
+          },
+          {
+            "text": "Blog Page",
+            "slug": "./blog"
+          },
+          {
+            "text": "Article Page",
+            "slug": "./article"
+          },
+          {
+            "text": "Sign In Page",
+            "slug": "./signin"
+          },
+          {
+            "text": "Sign Up Page",
+            "slug": "./signup"
+          },
+          {
+            "text": "404 Page",
+            "slug": "./404"
+          }
+        ]
+      }
+    ]
+  }
+}

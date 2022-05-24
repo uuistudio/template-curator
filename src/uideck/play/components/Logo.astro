@@ -1,0 +1,13 @@
+---
+  import { Icon } from "astro-icon";
+  let {logo} = Astro.props
+  let {icon, texts} = {...logo}
+---
+<div class="-mt-8 flex items-end">
+  <Icon class={icon.style} size={icon.size} name={icon.name} />
+  {texts.map(text=>
+  <span class={text.style}>
+    {text.text}
+    </span>
+  )}
+</div>

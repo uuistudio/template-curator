@@ -1,0 +1,37 @@
+---
+import Full from "@template/layouts/Full.astro";
+import Hero from "@template/components/Hero/Hero.astro";
+import Features from "@template/components/Features/Features.astro";
+import About from "@template/components/About/About.astro";
+import Pricing from "@template/components/Pricing.astro";
+import Faq from "@template/components/Faq/Faq.astro";
+import Testimonial from "@template/components/Testimonial/Testimonial.astro";
+import Team from "@template/components/Team.astro";
+import Logo from '@template/components/Logo.astro'
+
+import SiteData from "@src/utils.js"
+let site = await SiteData('../data')
+
+let meta = {
+  title: site.name,
+  navbar: site.navbar
+}
+
+let hero = site.home.hero
+---
+
+<Full {meta}>
+  <Fragment slot="logo">
+    <Logo logo={site.logo} />
+  </Fragment>
+  <Hero slot="primary" {hero}>
+  </Hero>
+  <Fragment slot="content">
+    <Features />
+    <About />
+    <Faq />
+    <Pricing />
+    <Testimonial />
+    <Team />
+  </Fragment>
+</Full>

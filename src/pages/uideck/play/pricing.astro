@@ -1,0 +1,26 @@
+---
+import Full from "@template/layouts/Full.astro";
+
+import Banner from "@template/components/Banner.astro";
+import Pricing from "@template/components/Pricing.astro";
+import Faq from "@template/components/Faq/Faq.astro";
+import Logo from '@template/components/Logo.astro'
+
+import SiteData from "@src/utils.js"
+let site = await SiteData('../data')
+let title = "Pricing Page";
+let meta = {
+  title: title,
+};
+---
+
+<Full {meta}>
+  <Fragment slot="logo">
+    <Logo logo={site.logo} />
+  </Fragment>
+  <Banner {title} slot="primary" />
+  <Fragment slot="content">
+    <Pricing />
+    <Faq />
+  </Fragment>
+</Full>
